@@ -1,48 +1,33 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>🌱 SIP home</title>
-  <style>
-    html, body {
-      margin: 0;
-      height: 100%;
-      width: 100%;
-      overflow: hidden;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌱 SIP home</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    .iframe-container {
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      position: relative;
-    }
+        html, body {
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+        }
 
-    iframe {
-      width: 1200px;  /* largeur de base Notion */
-      height: 100%;
-      border: none;
-      transform-origin: top left;
-    }
-  </style>
+        iframe {
+            height: 100%;
+            width: 80%;
+            border: none;
+        }
+    </style>
 </head>
 <body>
-  <div class="iframe-container">
-    <iframe id="notionFrame" src="https://361degres.notion.site/ebd/238bb11360ce8030afc8ef0abd85205d"></iframe>
-  </div>
-
-  <script>
-    function resizeIframe() {
-      const iframe = document.getElementById("notionFrame");
-      const containerWidth = document.body.clientWidth;
-      const baseWidth = 1200; // largeur de référence de Notion
-      const scale = baseWidth / containerWidth;
-      iframe.style.transform = `scale(${scale})`;
-    }
-
-    window.addEventListener("resize", resizeIframe);
-    window.addEventListener("load", resizeIframe);
-  </script>
+    <iframe 
+        src="https://361degres.notion.site/ebd/238bb11360ce8030afc8ef0abd85205d" 
+        allowfullscreen
+    ></iframe>
 </body>
 </html>
