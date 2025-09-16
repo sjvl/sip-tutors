@@ -37,7 +37,7 @@
       const iframe = document.getElementById("notionFrame");
       const containerWidth = document.body.clientWidth;
       const baseWidth = 1200; // largeur de référence de Notion
-      const scale = containerWidth / baseWidth;
+      const scale = baseWidth / containerWidth;
       iframe.style.transform = `scale(${scale})`;
     }
 
