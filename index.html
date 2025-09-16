@@ -12,37 +12,16 @@
         }
         
         html, body {
-            width: 100%;
             height: 100%;
             overflow: hidden;
         }
         
         iframe {
             width: 100%;
-            height: 100%;
+            height: 100vh;
             border: none;
-            display: block;
         }
     </style>
-    <script>
-        // S'adapter automatiquement aux changements de taille de la fenêtre parente
-        function resizeIframe() {
-            const iframe = document.querySelector('iframe');
-            if (iframe) {
-                iframe.style.width = '100%';
-                iframe.style.height = '100%';
-            }
-        }
-
-        // Écouter les changements de taille de la fenêtre
-        window.addEventListener('resize', resizeIframe);
-        
-        // S'assurer que l'iframe est redimensionnée au chargement
-        window.addEventListener('load', resizeIframe);
-        
-        // Pour une compatibilité maximale avec les embeddings
-        document.addEventListener('DOMContentLoaded', resizeIframe);
-    </script>
 </head>
 <body>        
     <iframe 
